@@ -1,0 +1,45 @@
+{
+    "name": "kalimeromk/nbrm",
+    "description": "This package provides seamless integration with the web service of the National Bank of the Republic of Macedonia (NBRM). It allows Laravel applications to fetch foreign exchange rates and currency data directly from NBRM’s official API.",
+    "type": "package",
+    "version": "1.0.0",
+    "keywords": [
+        "laravel"
+    ],
+    "authors": [
+        {
+            "name": "Zoran Shefot Bogoevski",
+            "email": "zbogoevski@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Kalimeromk\\Nbrm\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Kalimeromk\\Nbrm\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Kalimeromk\\Nbrm\\NBRMExchangeeServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "require-dev": {
+        "orchestra/testbench": "^9.0",
+        "phpunit/phpunit": "^11.0",
+        "rector/rector": "2.0.7"
+    }
+}
